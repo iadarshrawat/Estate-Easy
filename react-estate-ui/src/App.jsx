@@ -3,6 +3,7 @@ import Layout from './routes/layout/Layout';
 import ListPage from './routes/listPage/ListPage';
 import { createBrowserRouter, RouterProvider} from "react-router-dom";
 import SinglePage from './routes/singlePage/SinglePage';
+import ProfilePage from './routes/profilePage/ProfilePage';
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
         {
           path: "/:id",
           element:<SinglePage/>
+        },
+        {
+          path: "/profile",
+          element:<ProfilePage/>
         }
       ]
     }
