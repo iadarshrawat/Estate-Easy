@@ -1,1 +1,3 @@
 ./react-estate-ui/node_modules
+./api/node_modules
+./api/.gitignore
