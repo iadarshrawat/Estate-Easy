@@ -16,10 +16,11 @@ export const register = async (req, res)=>{
             password: hashPassword, 
         },
     });
-    
-    res.status(201).json({message: "user created successfully"});
+    console.log(newUser);
+    res.status(201).json({ message: "user created successfully" });
+
     } catch (error) {
-        console.log(error);
+        console.log("failed to create user");
         res.status(500).json({message: "failed to create user !"});
     }
 
@@ -39,16 +40,16 @@ export const login = async (req, res)=>{
 
         const token = jwt.sign({
             id: user.id,
+            isAdmin: false,
         }, process.env.JWT_SECRET_KEY, {expiresIn : age});
 
+        const {password: userPassword, ...userInfo} = user;
         
         res.cookie("token", token, {
             httpOnly: true,
             maxAge: age,
             // secure: true
-        }).status(200).json({
-            message: "login successfully"
-        })
+        }).status(200).json(userInfo);
 
     } catch (error) {
         console.log(error)
