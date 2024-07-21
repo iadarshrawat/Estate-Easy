@@ -28,7 +28,7 @@ model Post {
   bathroom   Int
   latitude   String
   longitude  String
-  type       Type
+  type       String
   property   Property
   createdAt  DateTime    @default(now())
   user       User        @relation(fields: [userId], references: [id])
