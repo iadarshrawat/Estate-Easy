@@ -29,15 +29,17 @@ export const getPost = async (req, res)=>{
             where:{id},
             include:{
                 postDetail: true,
-                user: {
-                    select:{
-                        username: true,
-                        avatar: true,
-                    }
-                },
+                user: true,
+                // user: {
+                //     select:{
+                //         username: true,
+                //         avatar: true,
+                //     }
+                // },
             }
         })
-        res.status(200).jsonp(post);
+        console.log(post);
+        res.status(200).json(post);
     } catch (err) {
         console.log(err);
         res.status(500).json({message: "Failed to get post"})
