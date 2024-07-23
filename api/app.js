@@ -3,6 +3,8 @@ import postRoute from "./rotues/post.route.js";
 import authRoute from "./rotues/auth.route.js";
 import userRoute from "./rotues/user.route.js";
 import testRoute from "./rotues/test.route.js";
+import chatRoute from "./rotues/chat.route.js";
+import messageRoute from "./rotues/message.route.js";
 import cookieParser from "cookie-parser";
 import cors from 'cors';
 import dotenv from 'dotenv'
@@ -18,6 +20,9 @@ app.use('/api/users', userRoute);
 app.use('/api/auth', authRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/test', testRoute);
+app.use('/api/chats', chatRoute);
+app.use('/api/messages', messageRoute); 
+
 
 app.listen(8800, ()=>{
     console.log("server is running");
