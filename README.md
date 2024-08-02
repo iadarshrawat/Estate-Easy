@@ -1,4 +1,6 @@
 
+![Screenshot 2024-07-22 100433](https://github.com/user-attachments/assets/17fb1b7c-c5c0-404b-ac0d-7b4b30911198)
+
 # Real Estate Website
 
 This project is a full-stack real estate website that allows users to buy or rent properties. It is built using the MERN stack with Node.js, MongoDB, Prisma, React.js, and Socket.io for real-time communication.
