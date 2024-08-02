@@ -1,6 +1,7 @@
-# Task-Troppers
 
-Task-Troppers is a platform similar to Fiverr that connects freelancers with clients. Users can post tasks, browse freelancer profiles, and hire professionals for various services. The project is built using the MERN stack with Node.js, MongoDB, Prisma, and React.js.
+# Real Estate Website
+
+This project is a full-stack real estate website that allows users to buy or rent properties. It is built using the MERN stack with Node.js, MongoDB, Prisma, React.js, and Socket.io for real-time communication.
 
 ## Table of Contents
 
@@ -16,11 +17,10 @@ Task-Troppers is a platform similar to Fiverr that connects freelancers with cli
 
 ## Features
 
-- Post tasks and services.
-- Browse and hire freelancers.
-- User authentication and authorization.
-- Detailed user profiles with ratings and reviews.
-- Secure payment integration.
+- Browse properties for sale or rent.
+- Real-time chat with an admin.
+- Secure user authentication and authorization.
+- Detailed property listings with images, descriptions, and prices.
 - Responsive design for mobile and desktop.
 
 ## Technologies
@@ -28,6 +28,7 @@ Task-Troppers is a platform similar to Fiverr that connects freelancers with cli
 - **Frontend:** React.js
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB, Prisma
+- **Real-time Communication:** Socket.io
 
 ## Getting Started
 
@@ -45,8 +46,8 @@ These instructions will get you a copy of the project up and running on your loc
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/task-troppers.git
-    cd task-troppers
+    git clone https://github.com/yourusername/real-estate-website.git
+    cd real-estate-website
     ```
 
 2. **Install dependencies for the backend:**
@@ -60,6 +61,13 @@ These instructions will get you a copy of the project up and running on your loc
 
     ```bash
     cd ../frontend
+    npm install
+    ```
+
+4. **Install dependencies for Socket.io:**
+
+    ```bash
+    cd ../socket.io
     npm install
     ```
 
@@ -97,21 +105,33 @@ These instructions will get you a copy of the project up and running on your loc
     npm start
     ```
 
-6. **Open your browser:**
+6. **Start the Socket.io server:**
+
+    ```bash
+    cd ../socket.io
+    npm start
+    ```
+
+7. **Open your browser:**
 
     Visit `http://localhost:3000` to view the website.
 
 ## Folder Structure
 
 ```plaintext
-task-troppers/
+real-estate-website/
 ├── backend/
 │   ├── prisma/
 │   ├── src/
 │   ├── package.json
 │   └── ...
-└── frontend/
-    ├── src/
-    ├── public/
-    ├── package.json
-    └── ...
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── ...
+├── socket.io/
+│   ├── src/
+│   ├── package.json
+│   └── ...
+└── README.md
