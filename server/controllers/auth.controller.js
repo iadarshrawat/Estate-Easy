@@ -4,21 +4,18 @@ import jwt from "jsonwebtoken";
 import 'dotenv/config'
 
 export const register = async (req, res)=>{
-
     try {
         const {username, email, password} = req.body;
-    const hashPassword = await bcrypt.hash(password, 10); 
-
-    const newUser = await prisma.user.create({
-        data: {
-            username,
-            email,
-            password: hashPassword, 
-        },
-    });
-    console.log(newUser);
-    res.status(201).json({ message: "user created successfully" });
-
+        const hashPassword = await bcrypt.hash(password, 10);
+        const newUser = await prisma.user.create({
+            data: {
+                username,
+                email,
+                password: hashPassword, 
+            },
+        });
+        console.log(newUser);
+        res.status(201).json({ message: "user created successfully" });
     } catch (error) {
         console.log("failed to create user");
         res.status(500).json({message: "failed to create user !"});
@@ -27,7 +24,6 @@ export const register = async (req, res)=>{
 }
 export const login = async (req, res)=>{
     const {username, password} = req.body;
-
     try {
         const user = await prisma.user.findUnique({where:{username}})
         if(!user) return res.status(401).json({message: "Invalid Credentials"});
@@ -37,7 +33,6 @@ export const login = async (req, res)=>{
         if(!isPasswordValid) return res.status(401).json({message:"Invalid Credentials"});
 
         const age = 1000 * 60 * 60 * 24 * 7;
-
         const token = jwt.sign({
             id: user.id,
             isAdmin: false,

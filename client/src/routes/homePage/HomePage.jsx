@@ -16,7 +16,7 @@ function HomePage() {
                     <h1 className='title'>
                         Find Real Estate & Get Your Dream Place
                     </h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore reiciendis amet fugit vero ad excepturi doloribus sed veniam assumenda, repellendus, molestiae delectus laudantium minima magni dicta dignissimos mollitia eius.</p>
+                    <p>Welcome to Esate-Easy, where we turn real estate dreams into reality. With a deep knowledge of the market and a commitment to excellence, we’re here to guide you through every step of the buying, selling, or renting process.</p>
                     <SearchBar/>
                     <div className="boxes">
                         <div className="box">

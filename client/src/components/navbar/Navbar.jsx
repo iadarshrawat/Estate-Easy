@@ -15,12 +15,12 @@ function Navbar() {
         <div className="left">
           <a href="/" className="logo">
             <img src="logo.png" alt="" />
-            <span>LamaEstate</span>
+            <span>Estate-Easy</span>
           </a>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-          <a href="">Agents</a>
+          <a href="/">Home</a>
+          <a href="/about">Author</a>
+          <a href="/contact">Contact</a>
+          <a href="/list">Properties</a>
         </div>
         <div className="right">
           {currentUser ? (
@@ -43,9 +43,9 @@ function Navbar() {
           </div>
           <div className={open ? "menu active": "menu"}>
           <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-          <a href="">Agents</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/list">Properties</a>
           <a href="">Sign in</a>
           <a href="">Sign up</a>
           </div>
